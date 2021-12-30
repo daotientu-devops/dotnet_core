@@ -46,14 +46,21 @@ namespace MyFirstCoreWebApp
 
             app.Use(async (context, next) =>
             {
-                await context.Response.WriteAsync("Getting Response from First Middleware\n");
+                await context.Response.WriteAsync("Middleware1: Incoming Request\n");
                 await next();
+                await context.Response.WriteAsync("Middleware1: Outgoing Response\n");
             });
 
             app.Use(async (context, next) =>
             {
-                await context.Response.WriteAsync("Getting Response from Second Middleware\n");
+                await context.Response.WriteAsync("Middleware2: Incoming Request\n");
                 await next();
+                await context.Response.WriteAsync("Middleware2: Outgoing Response\n");
+            });
+
+            app.Run(async (context) =>
+            {
+                await context.Response.WriteAsync("Middleware3: Incoming Request handled and response generated\n");
             });
 
             app.UseEndpoints(endpoints =>
