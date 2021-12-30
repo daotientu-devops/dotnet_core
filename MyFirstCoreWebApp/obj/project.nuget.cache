@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "mqA79Z45HJWibpPh4eqjz8m3ucCI599+u6TIPYKadEZAWsBasGBjGpDzoA7PJL7QL9m9KWpPt6OszjV2XTf61A==",
+  "success": true,
+  "projectFilePath": "D:\\xampp\\htdocs\\dotnet_core_dev\\MyFirstCoreWebApp\\MyFirstCoreWebApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
