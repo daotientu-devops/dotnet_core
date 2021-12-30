@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
 
 namespace MyFirstCoreWebApp
 {
@@ -28,7 +29,11 @@ namespace MyFirstCoreWebApp
         {
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
+                DeveloperExceptionPageOptions developerExceptionPageOptions = new DeveloperExceptionPageOptions
+                {
+                    SourceCodeLineCount = 5
+                };
+                app.UseDeveloperExceptionPage(developerExceptionPageOptions);
             }
             else
             {
@@ -36,8 +41,7 @@ namespace MyFirstCoreWebApp
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-
-            app.UseHttpsRedirection();
+            /*
             // Specify the MyCustomPage1.html as the default page
             DefaultFilesOptions defaultFilesOptions = new DefaultFilesOptions();
             defaultFilesOptions.DefaultFileNames.Clear();
@@ -48,19 +52,18 @@ namespace MyFirstCoreWebApp
 
             // Adding static files middleware to serve the static files
             app.UseStaticFiles();
-
-            /*
             // Use UseFileServer instead of UseDefaultFiles & UseStaticFiles
             FileServerOptions fileServerOptions = new FileServerOptions();
             fileServerOptions.DefaultFilesOptions.DefaultFileNames.Clear();
             fileServerOptions.DefaultFilesOptions.DefaultFileNames.Add("MyCustomPage2.html");
             app.UseFileServer(fileServerOptions);
             */
+            app.UseHttpsRedirection();
 
             app.UseRouting();
 
             app.UseAuthorization();
-
+            /*
             app.Use(async (context, next) =>
             {
                 await context.Response.WriteAsync("Middleware1: Incoming Request\n");
@@ -79,15 +82,15 @@ namespace MyFirstCoreWebApp
             {
                 await context.Response.WriteAsync("Middleware3: Incoming Request handled and response generated\n");
             });
-
+            */
             app.UseEndpoints(endpoints =>
             {
                 endpoints.Map("/", async context =>
                 {
+                    throw new Exception("Error Occurred while processing your request");
                     await context.Response.WriteAsync("Worker Process Name: " + System.Diagnostics.Process.GetCurrentProcess().ProcessName + " + APP_KEY: " + Configuration["APP_KEY"]);
                 });
             });
-
         }
     }
 }
