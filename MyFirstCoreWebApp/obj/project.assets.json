@@ -54,11 +54,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\xampp\\htdocs\\dotnet_core_dev\\MyFirstCoreWebApp\\MyFirstCoreWebApp.csproj",
+      "projectUniqueName": "D:\\xampp\\htdocs\\dotnet_core\\MyFirstCoreWebApp\\MyFirstCoreWebApp.csproj",
       "projectName": "MyFirstCoreWebApp",
-      "projectPath": "D:\\xampp\\htdocs\\dotnet_core_dev\\MyFirstCoreWebApp\\MyFirstCoreWebApp.csproj",
+      "projectPath": "D:\\xampp\\htdocs\\dotnet_core\\MyFirstCoreWebApp\\MyFirstCoreWebApp.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "D:\\xampp\\htdocs\\dotnet_core_dev\\MyFirstCoreWebApp\\obj\\",
+      "outputPath": "D:\\xampp\\htdocs\\dotnet_core\\MyFirstCoreWebApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

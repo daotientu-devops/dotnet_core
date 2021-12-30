@@ -44,13 +44,26 @@ namespace MyFirstCoreWebApp
 
             app.UseAuthorization();
 
+            app.Use(async (context, next) =>
+            {
+                await context.Response.WriteAsync("Getting Response from First Middleware\n");
+                await next();
+            });
+
+            app.Use(async (context, next) =>
+            {
+                await context.Response.WriteAsync("Getting Response from Second Middleware\n");
+                await next();
+            });
+
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGet("/", async context =>
+                endpoints.Map("/", async context =>
                 {
                     await context.Response.WriteAsync("Worker Process Name: " + System.Diagnostics.Process.GetCurrentProcess().ProcessName + " + APP_KEY: " + Configuration["APP_KEY"]);
                 });
             });
+
         }
     }
 }
