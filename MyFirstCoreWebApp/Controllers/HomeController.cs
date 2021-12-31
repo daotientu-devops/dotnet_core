@@ -11,9 +11,9 @@ namespace MyFirstCoreWebApp.Controllers
             return View("Test");
         }
 
-        public ViewResult About()
+        public string About()
         {
-            return View();
+            return "About() Action Method of HomeController";
         }
 
         public JsonResult GetStudentDetails(int Id)

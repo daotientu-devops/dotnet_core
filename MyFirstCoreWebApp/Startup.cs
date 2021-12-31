@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -21,7 +22,7 @@ namespace MyFirstCoreWebApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
-            services.AddMvc();
+            services.AddMvc(options => options.EnableEndpointRouting = false);
             // Adding MVC Service. Framework Service
             services.AddControllersWithViews();
             // Application Service (Register a service with Dependency Injection Contains)
@@ -86,15 +87,20 @@ namespace MyFirstCoreWebApp
                 await context.Response.WriteAsync("Middleware3: Incoming Request handled and response generated\n");
             });
             */
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller}/{action}/{id:int?}",
+                    defaults: new { controller = "Home", action = "Index" });
+            });
             app.UseEndpoints(endpoints =>
             {
-                /*
                 endpoints.MapGet("/", async context =>
                 {
                     //throw new Exception("Error Occurred while processing your request");
                     await context.Response.WriteAsync("Worker Process Name: " + System.Diagnostics.Process.GetCurrentProcess().ProcessName + " + APP_KEY: " + Configuration["APP_KEY"]);
                 });
-                */
                 endpoints.MapDefaultControllerRoute();
             });
         }
