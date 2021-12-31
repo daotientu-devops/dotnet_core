@@ -38,9 +38,7 @@ namespace MyFirstCoreWebApp.Controllers
                 Section = "A",
                 Gender = "Male"
             };
-            // Storing Student Data
-            ViewBag.Student = student;
-            return View();
+            return View(student);
         }
 
         public ViewResult Details()
