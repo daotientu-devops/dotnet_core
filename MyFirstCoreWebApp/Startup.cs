@@ -1,10 +1,8 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
 
 namespace MyFirstCoreWebApp
 {
@@ -85,11 +83,14 @@ namespace MyFirstCoreWebApp
             */
             app.UseEndpoints(endpoints =>
             {
-                endpoints.Map("/", async context =>
+                /*
+                endpoints.MapGet("/", async context =>
                 {
-                    throw new Exception("Error Occurred while processing your request");
+                    //throw new Exception("Error Occurred while processing your request");
                     await context.Response.WriteAsync("Worker Process Name: " + System.Diagnostics.Process.GetCurrentProcess().ProcessName + " + APP_KEY: " + Configuration["APP_KEY"]);
                 });
+                */
+                endpoints.MapDefaultControllerRoute();
             });
         }
     }
