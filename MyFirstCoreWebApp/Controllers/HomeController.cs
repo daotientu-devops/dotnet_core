@@ -25,6 +25,24 @@ namespace MyFirstCoreWebApp.Controllers
             return Json(studentDetails);
         }
 
+        public ViewResult Detail()
+        {
+            //String string Data
+            ViewBag.Title = "Student Detail Page";
+            ViewBag.Header = "Student Detail";
+            Student student = new Student()
+            {
+                StudentId = 110,
+                Name = "James",
+                Branch = "CSE",
+                Section = "A",
+                Gender = "Male"
+            };
+            // Storing Student Data
+            ViewBag.Student = student;
+            return View();
+        }
+
         public ViewResult Details()
         {
             //String string Data

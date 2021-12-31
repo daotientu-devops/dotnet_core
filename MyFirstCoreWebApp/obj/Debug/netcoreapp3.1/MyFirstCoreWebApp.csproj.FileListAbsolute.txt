@@ -81,3 +81,4 @@ D:\xampp\htdocs\dotnet_core\MyFirstCoreWebApp\obj\Debug\netcoreapp3.1\Razor\View
 D:\xampp\htdocs\dotnet_core\MyFirstCoreWebApp\obj\Debug\netcoreapp3.1\Razor\Views\Home\About.cshtml.g.cs
 D:\xampp\htdocs\dotnet_core\MyFirstCoreWebApp\obj\Debug\netcoreapp3.1\Razor\Views\Home\Details.cshtml.g.cs
 D:\xampp\htdocs\dotnet_core\MyFirstCoreWebApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+D:\xampp\htdocs\dotnet_core\MyFirstCoreWebApp\obj\Debug\netcoreapp3.1\Razor\Views\Home\Detail.cshtml.g.cs
