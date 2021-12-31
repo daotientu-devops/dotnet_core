@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using MyFirstCoreWebApp.Models;
+using MyFirstCoreWebApp.Repositories;
 
 namespace MyFirstCoreWebApp
 {
@@ -20,6 +22,11 @@ namespace MyFirstCoreWebApp
         {
             services.AddRazorPages();
             services.AddMvc();
+            // Adding MVC Service. Framework Service
+            services.AddControllersWithViews();
+            // Application Service (Register a service with Dependency Injection Contains)
+            // Below using Singleton method: In this case, the IoC will create and share a single instance of a service object throughout the application's lifetime
+            services.AddSingleton<IStudentRepository, TestStudentRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

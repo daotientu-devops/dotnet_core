@@ -1,14 +1,22 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MyFirstCoreWebApp.Models;
 using MyFirstCoreWebApp.Repositories;
+using System.Collections.Generic;
 
 namespace MyFirstCoreWebApp.Controllers
 {
     public class HomeController : Controller
     {
-        public string Index()
+        private readonly IStudentRepository _repository = null;
+        public HomeController(IStudentRepository repository)
         {
-            return "This is Index action from MVC Controller";
+            _repository = repository;
+        }
+
+        public JsonResult Index()
+        {
+            List<Student> allStudentDetails = _repository.GetAllStudents();
+            return Json(allStudentDetails);
         }
 
         public JsonResult GetStudentDetails(int Id)

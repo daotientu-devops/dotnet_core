@@ -22,5 +22,10 @@ namespace MyFirstCoreWebApp.Repositories
         {
             return DataSource().FirstOrDefault(e => e.StudentId == StudentId);
         }
+
+        public List<Student> GetAllStudents()
+        {
+            return DataSource();
+        }
     }
 }
