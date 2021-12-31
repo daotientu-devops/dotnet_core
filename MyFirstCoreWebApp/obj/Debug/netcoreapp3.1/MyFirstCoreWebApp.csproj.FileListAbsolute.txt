@@ -76,3 +76,7 @@ D:\xampp\htdocs\dotnet_core\MyFirstCoreWebApp\obj\Debug\netcoreapp3.1\MyFirstCor
 D:\xampp\htdocs\dotnet_core\MyFirstCoreWebApp\obj\Debug\netcoreapp3.1\MyFirstCoreWebApp.dll
 D:\xampp\htdocs\dotnet_core\MyFirstCoreWebApp\obj\Debug\netcoreapp3.1\MyFirstCoreWebApp.pdb
 D:\xampp\htdocs\dotnet_core\MyFirstCoreWebApp\obj\Debug\netcoreapp3.1\MyFirstCoreWebApp.genruntimeconfig.cache
+D:\xampp\htdocs\dotnet_core\MyFirstCoreWebApp\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+D:\xampp\htdocs\dotnet_core\MyFirstCoreWebApp\obj\Debug\netcoreapp3.1\Razor\Views\Home\Test.cshtml.g.cs
+D:\xampp\htdocs\dotnet_core\MyFirstCoreWebApp\bin\Debug\netcoreapp3.1\System.Web.Razor.dll
+D:\xampp\htdocs\dotnet_core\MyFirstCoreWebApp\obj\Debug\netcoreapp3.1\Razor\Views\Home\About.cshtml.g.cs

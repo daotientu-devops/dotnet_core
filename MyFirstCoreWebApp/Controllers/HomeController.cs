@@ -7,12 +7,14 @@ namespace MyFirstCoreWebApp.Controllers
 {
     public class HomeController : Controller
     {
-        public JsonResult Index()
+        public ViewResult Index()
         {
-            var services = this.HttpContext.RequestServices;
-            var _repository = (IStudentRepository)services.GetService(typeof(IStudentRepository));
-            List<Student> allStudentDetails = _repository.GetAllStudents();
-            return Json(allStudentDetails);
+            return View("Test");
+        }
+
+        public ViewResult About()
+        {
+            return View();
         }
 
         public JsonResult GetStudentDetails(int Id)
