@@ -7,22 +7,19 @@ namespace MyFirstCoreWebApp.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IStudentRepository _repository = null;
-        public HomeController(IStudentRepository repository)
-        {
-            _repository = repository;
-        }
-
         public JsonResult Index()
         {
+            var services = this.HttpContext.RequestServices;
+            var _repository = (IStudentRepository)services.GetService(typeof(IStudentRepository));
             List<Student> allStudentDetails = _repository.GetAllStudents();
             return Json(allStudentDetails);
         }
 
         public JsonResult GetStudentDetails(int Id)
         {
-            TestStudentRepository repository = new TestStudentRepository();
-            Student studentDetails = repository.GetStudentById(Id);
+            var services = this.HttpContext.RequestServices;
+            var _repository = (IStudentRepository)services.GetService(typeof(IStudentRepository));
+            Student studentDetails = _repository.GetStudentById(Id);
             return Json(studentDetails);
         }
     }
