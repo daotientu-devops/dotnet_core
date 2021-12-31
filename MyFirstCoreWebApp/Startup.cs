@@ -47,22 +47,20 @@ namespace MyFirstCoreWebApp
                 app.UseHsts();
             }
             /*
-            // Specify the MyCustomPage1.html as the default page
-            DefaultFilesOptions defaultFilesOptions = new DefaultFilesOptions();
-            defaultFilesOptions.DefaultFileNames.Clear();
-            defaultFilesOptions.DefaultFileNames.Add("MyCustomPage1.html");
-
-            // Setting the default files
-            app.UseDefaultFiles(defaultFilesOptions);
-
-            // Adding static files middleware to serve the static files
-            app.UseStaticFiles();
             // Use UseFileServer instead of UseDefaultFiles & UseStaticFiles
             FileServerOptions fileServerOptions = new FileServerOptions();
             fileServerOptions.DefaultFilesOptions.DefaultFileNames.Clear();
             fileServerOptions.DefaultFilesOptions.DefaultFileNames.Add("MyCustomPage2.html");
             app.UseFileServer(fileServerOptions);
             */
+            // Specify the MyCustomPage1.html as the default page
+            DefaultFilesOptions defaultFilesOptions = new DefaultFilesOptions();
+            defaultFilesOptions.DefaultFileNames.Clear();
+            defaultFilesOptions.DefaultFileNames.Add("MyCustomPage1.html");
+            // Setting the default files
+            app.UseDefaultFiles(defaultFilesOptions);
+            // Adding static files middleware to serve the static files
+            app.UseStaticFiles();
             app.UseHttpsRedirection();
 
             app.UseRouting();

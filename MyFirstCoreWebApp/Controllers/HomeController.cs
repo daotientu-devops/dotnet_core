@@ -24,5 +24,23 @@ namespace MyFirstCoreWebApp.Controllers
             Student studentDetails = _repository.GetStudentById(Id);
             return Json(studentDetails);
         }
+
+        public ViewResult Details()
+        {
+            //String string Data
+            ViewData["Title"] = "Student Details Page";
+            ViewData["Header"] = "Student Details";
+            Student student = new Student()
+            {
+                StudentId = 110,
+                Name = "James",
+                Branch = "CSE",
+                Section = "A",
+                Gender = "Male"
+            };
+            // Storing Student Data
+            ViewData["Student"] = student;
+            return View();
+        }
     }
 }

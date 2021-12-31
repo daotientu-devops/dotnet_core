@@ -14,7 +14,7 @@ namespace MyFirstCoreWebApp
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>().UseWebRoot("MyWebRoot");
+                    webBuilder.UseStartup<Startup>().UseWebRoot("wwwroot");
                 });
     }
 }
