@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MyFirstCoreWebApp.Models;
-using MyFirstCoreWebApp.Repositories;
-using System.Collections.Generic;
+using MyFirstCoreWebApp.ViewModels;
 
 namespace MyFirstCoreWebApp.Controllers
 {
@@ -27,18 +26,34 @@ namespace MyFirstCoreWebApp.Controllers
 
         public ViewResult Detail()
         {
-            //String string Data
-            ViewBag.Title = "Student Detail Page";
-            ViewBag.Header = "Student Detail";
+            //Student Basic Detail
             Student student = new Student()
             {
                 StudentId = 110,
-                Name = "James",
+                Name = "Dillip",
                 Branch = "CSE",
                 Section = "A",
                 Gender = "Male"
             };
-            return View(student);
+            //Student Address
+            Address address = new Address()
+            {
+                StudentId = 111,
+                City = "Mumbai",
+                State = "Maharashtra",
+                Country = "India",
+                Pin = "400097"
+            };
+            //Creating the View model
+            StudentDetailsViewModel studentDetailsViewModel = new StudentDetailsViewModel()
+            {
+                Student = student,
+                Address = address,
+                Title = "Student Detail Page",
+                Header = "Student Detail",           
+            };
+            // Pass the studentDetailsViewModel to the view
+            return View(studentDetailsViewModel);
         }
 
         public ViewResult Details()
