@@ -83,6 +83,7 @@ namespace MyFirstCoreWebApp
             */
             app.UseEndpoints(endpoints =>
             {
+                //endpoints.MapGet("/", async context =>{await context.Response.WriteAsync(Configuration["APP_KEY"]);});
                 endpoints.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
