@@ -2,6 +2,8 @@
 using MyFirstCoreWebApp.Models;
 using MyFirstCoreWebApp.Repositories;
 using MyFirstCoreWebApp.ViewModels;
+using System;
+using System.Linq;
 
 namespace MyFirstCoreWebApp.Controllers
 {
@@ -10,9 +12,14 @@ namespace MyFirstCoreWebApp.Controllers
         [Route("")]
         [Route("Home")]
         [Route("Home/Index")]
+        [Route("Home/Create")]
         public ViewResult Index()
         {
-            return View("Test");
+            Student student = new Student
+            {
+                AllGenders = Enum.GetValues(typeof(Gender)).Cast<Gender>().ToList()
+            };
+            return View(student);
         }
 
         [Route("About")]

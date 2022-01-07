@@ -1,4 +1,6 @@
-﻿namespace MyFirstCoreWebApp.Models
+﻿using System.Collections.Generic;
+
+namespace MyFirstCoreWebApp.Models
 {
     public class Student
     {
@@ -7,5 +9,6 @@
         public Branch Branch { get; set; }
         public string Section { get; set; }
         public Gender Gender { get; set; }
+        public IEnumerable<Gender> AllGenders { get; set; }
     }
 }

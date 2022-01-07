@@ -1,5 +1,48 @@
-﻿@{ 
+﻿@model MyFirstCoreWebApp.Models.Student
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
     ViewBag.Title = "Index Page";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <h1>Index view belongs to Views/Home Folder</h1>
+<form asp-controller="Home" asp-action="Create" method="post" class="mt-3">
+    <div class="form-group row">
+        <label asp-for="Name" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="Name" class="form-control" placeholder="Name" />
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="Section" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="Section" class="form-control" placeholder="Section" />
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="Branch" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <select asp-for="Branch" class="custom-select mr-sm-2">
+                <option value="None">None</option>
+                <option value="CSE">CSE</option>
+                <option value="ETC">ETC</option>
+                <option value="Mech">Mech</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="Gender" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            @foreach (var gender in Model.AllGenders)
+            {
+                <label class="radio-inline">
+                    <input type="radio" asp-for="Gender" value="@gender" name="Gender" />@gender
+                </label>
+            }
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-10 offset-2">
+            <button type="submit" class="btn btn-primary">Create</button>
+        </div>
+    </div>
+</form>
