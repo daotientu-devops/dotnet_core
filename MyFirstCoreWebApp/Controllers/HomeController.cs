@@ -6,11 +6,15 @@ namespace MyFirstCoreWebApp.Controllers
 {
     public class HomeController : Controller
     {
+        [Route("/")]
+        [Route("Home")]
+        [Route("Home/Index")]
         public ViewResult Index()
         {
             return View("Test");
         }
 
+        [Route("~/About")]
         public string About()
         {
             return "About() Action Method of HomeController";
@@ -56,14 +60,15 @@ namespace MyFirstCoreWebApp.Controllers
             return View(studentDetailsViewModel);
         }
 
-        public ViewResult Details()
+        [Route("Home/Details/{id?}")]
+        public ViewResult Details(int id)
         {
             //String string Data
             ViewData["Title"] = "Student Details Page";
             ViewData["Header"] = "Student Details";
             Student student = new Student()
             {
-                StudentId = 110,
+                StudentId = id,
                 Name = "James",
                 Branch = "CSE",
                 Section = "A",
