@@ -11,11 +11,11 @@ namespace MyFirstCoreWebApp.Controllers
         {
             List<Student> listStudents = new List<Student>()
             {
-                new Student() {StudentId = 101, Name="James",Branch="CSE", Section="A", Gender="Male"},
-                new Student() {StudentId = 102, Name="Smith",Branch="ETC", Section="B", Gender="Male"},
-                new Student() {StudentId = 103, Name="David",Branch="CSE", Section="A", Gender="Male"},
-                new Student() {StudentId = 104, Name="Sara",Branch="CSE", Section="A", Gender="Female"},
-                new Student() {StudentId = 105, Name="Pam",Branch="ETC", Section="B", Gender="Female"},
+                new Student() {StudentId = 101, Name="James",Branch=Branch.CSE, Section="A", Gender=Gender.Male},
+                new Student() {StudentId = 102, Name="Smith",Branch=Branch.ETC, Section="B", Gender=Gender.Male},
+                new Student() {StudentId = 103, Name="David",Branch=Branch.CSE, Section="A", Gender=Gender.Male},
+                new Student() {StudentId = 104, Name="Sara",Branch=Branch.CSE, Section="A", Gender=Gender.Female},
+                new Student() {StudentId = 105, Name="Pam",Branch=Branch.ETC, Section="B", Gender=Gender.Female},
             };
             return View(listStudents);
         }

@@ -35,9 +35,9 @@ namespace MyFirstCoreWebApp.Controllers
             {
                 StudentId = 110,
                 Name = "Dillip",
-                Branch = "CSE",
+                Branch = Branch.CSE,
                 Section = "A",
-                Gender = "Male"
+                Gender = Gender.Male
             };
             //Student Address
             Address address = new Address()
@@ -70,9 +70,9 @@ namespace MyFirstCoreWebApp.Controllers
             {
                 StudentId = id,
                 Name = "James",
-                Branch = "CSE",
+                Branch = Branch.CSE,
                 Section = "A",
-                Gender = "Male"
+                Gender = Gender.Male
             };
             // Storing Student Data
             ViewData["Student"] = student;
