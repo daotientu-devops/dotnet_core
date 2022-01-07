@@ -21,13 +21,7 @@ namespace MyFirstCoreWebApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddRazorPages();
             services.AddMvc(options => options.EnableEndpointRouting = false);
-            // Adding MVC Service. Framework Service
-            services.AddControllersWithViews();
-            // Application Service (Register a service with Dependency Injection Contains)
-            // Below using Singleton method: In this case, the IoC will create and share a single instance of a service object throughout the application's lifetime
-            services.AddSingleton<IStudentRepository, TestStudentRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,11 +49,11 @@ namespace MyFirstCoreWebApp
             app.UseFileServer(fileServerOptions);
             */
             // Specify the MyCustomPage1.html as the default page
-            DefaultFilesOptions defaultFilesOptions = new DefaultFilesOptions();
-            defaultFilesOptions.DefaultFileNames.Clear();
-            defaultFilesOptions.DefaultFileNames.Add("MyCustomPage1.html");
+            //DefaultFilesOptions defaultFilesOptions = new DefaultFilesOptions();
+            //defaultFilesOptions.DefaultFileNames.Clear();
+            //defaultFilesOptions.DefaultFileNames.Add("MyCustomPage1.html");
             // Setting the default files
-            app.UseDefaultFiles(defaultFilesOptions);
+            //app.UseDefaultFiles(defaultFilesOptions);
             // Adding static files middleware to serve the static files
             app.UseStaticFiles();
             app.UseHttpsRedirection();
@@ -87,21 +81,9 @@ namespace MyFirstCoreWebApp
                 await context.Response.WriteAsync("Middleware3: Incoming Request handled and response generated\n");
             });
             */
-            app.UseMvc(routes =>
-            {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller}/{action}/{id:int?}",
-                    defaults: new { controller = "Home", action = "Index" });
-            });
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGet("/", async context =>
-                {
-                    //throw new Exception("Error Occurred while processing your request");
-                    await context.Response.WriteAsync("Worker Process Name: " + System.Diagnostics.Process.GetCurrentProcess().ProcessName + " + APP_KEY: " + Configuration["APP_KEY"]);
-                });
-                endpoints.MapDefaultControllerRoute();
+                endpoints.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

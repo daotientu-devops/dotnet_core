@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MyFirstCoreWebApp.Models;
+using MyFirstCoreWebApp.Repositories;
 using MyFirstCoreWebApp.ViewModels;
 
 namespace MyFirstCoreWebApp.Controllers
@@ -14,7 +15,7 @@ namespace MyFirstCoreWebApp.Controllers
             return View("Test");
         }
 
-        [Route("~/About")]
+        [Route("About")]
         public string About()
         {
             return "About() Action Method of HomeController";
@@ -22,9 +23,8 @@ namespace MyFirstCoreWebApp.Controllers
 
         public JsonResult GetStudentDetails(int Id)
         {
-            var services = this.HttpContext.RequestServices;
-            var _repository = (IStudentRepository)services.GetService(typeof(IStudentRepository));
-            Student studentDetails = _repository.GetStudentById(Id);
+            TestStudentRepository repository = new TestStudentRepository();
+            Student studentDetails = repository.GetStudentById(Id);
             return Json(studentDetails);
         }
 
