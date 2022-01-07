@@ -82,3 +82,6 @@ D:\xampp\htdocs\dotnet_core\MyFirstCoreWebApp\obj\Debug\netcoreapp3.1\Razor\View
 D:\xampp\htdocs\dotnet_core\MyFirstCoreWebApp\obj\Debug\netcoreapp3.1\Razor\Views\Home\Details.cshtml.g.cs
 D:\xampp\htdocs\dotnet_core\MyFirstCoreWebApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 D:\xampp\htdocs\dotnet_core\MyFirstCoreWebApp\obj\Debug\netcoreapp3.1\Razor\Views\Home\Detail.cshtml.g.cs
+D:\xampp\htdocs\dotnet_core\MyFirstCoreWebApp\bin\Debug\netcoreapp3.1\libman.json
+D:\xampp\htdocs\dotnet_core\MyFirstCoreWebApp\obj\Debug\netcoreapp3.1\Razor\Views\Student\Index.cshtml.g.cs
+D:\xampp\htdocs\dotnet_core\MyFirstCoreWebApp\obj\Debug\netcoreapp3.1\Razor\Views\Student\Detail.cshtml.g.cs

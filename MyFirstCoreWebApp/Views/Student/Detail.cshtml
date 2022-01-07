@@ -1,0 +1,23 @@
+﻿@model MyFirstCoreWebApp.Models.Student
+@{
+    ViewBag.Title = "Student Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row justify-content-center m-3">
+    <div class="col-sm-8">
+        <div class="card">
+            <div class="card-header text-center">
+                <h1>@Model.Name</h1>
+            </div>
+            <div class="card-body">
+                <h4>Student ID: @Model.StudentId</h4>
+                <h4>Branch: @Model.Branch</h4>
+                <h4>Section: @Model.Section</h4>
+                <h4>Gender: @Model.Gender</h4>
+            </div>
+            <div class="card-footer text-center">
+                <a href="/Student" class="btn btn-primary">Back</a>
+            </div>
+        </div>
+    </div>
+</div>
