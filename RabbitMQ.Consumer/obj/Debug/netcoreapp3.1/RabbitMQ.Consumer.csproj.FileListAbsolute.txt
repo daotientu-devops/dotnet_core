@@ -1,0 +1,16 @@
+D:\xampp\htdocs\dotnet_core\RabbitMQ.Consumer\bin\Debug\netcoreapp3.1\RabbitMQ.Consumer.exe
+D:\xampp\htdocs\dotnet_core\RabbitMQ.Consumer\bin\Debug\netcoreapp3.1\RabbitMQ.Consumer.deps.json
+D:\xampp\htdocs\dotnet_core\RabbitMQ.Consumer\bin\Debug\netcoreapp3.1\RabbitMQ.Consumer.runtimeconfig.json
+D:\xampp\htdocs\dotnet_core\RabbitMQ.Consumer\bin\Debug\netcoreapp3.1\RabbitMQ.Consumer.runtimeconfig.dev.json
+D:\xampp\htdocs\dotnet_core\RabbitMQ.Consumer\bin\Debug\netcoreapp3.1\RabbitMQ.Consumer.dll
+D:\xampp\htdocs\dotnet_core\RabbitMQ.Consumer\bin\Debug\netcoreapp3.1\RabbitMQ.Consumer.pdb
+D:\xampp\htdocs\dotnet_core\RabbitMQ.Consumer\obj\Debug\netcoreapp3.1\RabbitMQ.Consumer.GeneratedMSBuildEditorConfig.editorconfig
+D:\xampp\htdocs\dotnet_core\RabbitMQ.Consumer\obj\Debug\netcoreapp3.1\RabbitMQ.Consumer.AssemblyInfoInputs.cache
+D:\xampp\htdocs\dotnet_core\RabbitMQ.Consumer\obj\Debug\netcoreapp3.1\RabbitMQ.Consumer.AssemblyInfo.cs
+D:\xampp\htdocs\dotnet_core\RabbitMQ.Consumer\obj\Debug\netcoreapp3.1\RabbitMQ.Consumer.csproj.CoreCompileInputs.cache
+D:\xampp\htdocs\dotnet_core\RabbitMQ.Consumer\obj\Debug\netcoreapp3.1\RabbitMQ.Consumer.dll
+D:\xampp\htdocs\dotnet_core\RabbitMQ.Consumer\obj\Debug\netcoreapp3.1\RabbitMQ.Consumer.pdb
+D:\xampp\htdocs\dotnet_core\RabbitMQ.Consumer\obj\Debug\netcoreapp3.1\RabbitMQ.Consumer.genruntimeconfig.cache
+D:\xampp\htdocs\dotnet_core\RabbitMQ.Consumer\bin\Debug\netcoreapp3.1\RabbitMQ.Client.dll
+D:\xampp\htdocs\dotnet_core\RabbitMQ.Consumer\bin\Debug\netcoreapp3.1\System.Threading.Channels.dll
+D:\xampp\htdocs\dotnet_core\RabbitMQ.Consumer\obj\Debug\netcoreapp3.1\RabbitMQ.Consumer.csproj.CopyComplete
