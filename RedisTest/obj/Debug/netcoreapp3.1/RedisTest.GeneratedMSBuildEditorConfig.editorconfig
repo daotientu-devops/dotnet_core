@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = RedisTest
+build_property.ProjectDir = D:\xampp\htdocs\dotnet_core\RedisTest\
