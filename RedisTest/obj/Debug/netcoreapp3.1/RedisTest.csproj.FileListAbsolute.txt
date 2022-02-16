@@ -49,3 +49,5 @@ D:\xampp\htdocs\dotnet_core\RedisTest\bin\Debug\netcoreapp3.1\runtimes\unix\lib\
 D:\xampp\htdocs\dotnet_core\RedisTest\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
 D:\xampp\htdocs\dotnet_core\RedisTest\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 D:\xampp\htdocs\dotnet_core\RedisTest\obj\Debug\netcoreapp3.1\RedisTest.csproj.CopyComplete
+D:\xampp\htdocs\dotnet_core\RedisTest\bin\Debug\netcoreapp3.1\Elasticsearch.Net.dll
+D:\xampp\htdocs\dotnet_core\RedisTest\bin\Debug\netcoreapp3.1\Nest.dll
